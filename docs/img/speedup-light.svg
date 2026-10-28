@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+<rect width="1000" height="440" fill="#fcfcfb"/>
+<text x="64" y="34" font-size="20" font-weight="600" fill="#0b0b0b">Speedup over FlashInfer cutlass_fused_moe, per workload</text>
+<text x="64" y="58" font-size="14" fill="#52514e">DeepSeek-V3 FP8 MoE layer, one H200, SM clock locked at 1400 MHz. All 19 workloads correct.</text>
+<rect x="530" y="76" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="548" y="86.5" font-size="13" fill="#52514e">Triton path (T &lt; 512)</text>
+<rect x="720" y="76" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="738" y="86.5" font-size="13" fill="#52514e">CUDA prefill path (T ≥ 512)</text>
+<line x1="64" x2="900" y1="376.0" y2="376.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="380.0" font-size="12" text-anchor="end" fill="#52514e">0×</text>
+<line x1="64" x2="900" y1="336.0" y2="336.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="340.0" font-size="12" text-anchor="end" fill="#52514e">1×</text>
+<line x1="64" x2="900" y1="296.0" y2="296.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="300.0" font-size="12" text-anchor="end" fill="#52514e">2×</text>
+<line x1="64" x2="900" y1="256.0" y2="256.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="260.0" font-size="12" text-anchor="end" fill="#52514e">3×</text>
+<line x1="64" x2="900" y1="216.0" y2="216.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="220.0" font-size="12" text-anchor="end" fill="#52514e">4×</text>
+<line x1="64" x2="900" y1="176.0" y2="176.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="180.0" font-size="12" text-anchor="end" fill="#52514e">5×</text>
+<line x1="64" x2="900" y1="136.0" y2="136.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="140.0" font-size="12" text-anchor="end" fill="#52514e">6×</text>
+<line x1="64" x2="900" y1="96.0" y2="96.0" stroke="#e7e6e1" stroke-width="1"/>
+<text x="54" y="100.0" font-size="12" text-anchor="end" fill="#52514e">7×</text>
+<path d="M68.0,376.0 V102.4 Q68.0,98.4 72.0,98.4 H100.0 Q104.0,98.4 104.0,102.4 V376.0 Z" fill="#2a78d6"/>
+<text x="86.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">1</text>
+<text x="86.0" y="91.4" font-size="12" font-weight="600" text-anchor="middle" fill="#0b0b0b">6.94×</text>
+<path d="M112.0,376.0 V191.3 Q112.0,187.3 116.0,187.3 H144.0 Q148.0,187.3 148.0,191.3 V376.0 Z" fill="#2a78d6"/>
+<text x="130.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">7</text>
+<path d="M156.0,376.0 V239.8 Q156.0,235.8 160.0,235.8 H188.0 Q192.0,235.8 192.0,239.8 V376.0 Z" fill="#2a78d6"/>
+<text x="174.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">14</text>
+<path d="M200.0,376.0 V163.0 Q200.0,159.0 204.0,159.0 H232.0 Q236.0,159.0 236.0,163.0 V376.0 Z" fill="#2a78d6"/>
+<text x="218.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">15</text>
+<text x="218.0" y="152.0" font-size="12" font-weight="600" text-anchor="middle" fill="#0b0b0b">5.43×</text>
+<path d="M244.0,376.0 V245.4 Q244.0,241.4 248.0,241.4 H276.0 Q280.0,241.4 280.0,245.4 V376.0 Z" fill="#2a78d6"/>
+<text x="262.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">16</text>
+<path d="M288.0,376.0 V277.2 Q288.0,273.2 292.0,273.2 H320.0 Q324.0,273.2 324.0,277.2 V376.0 Z" fill="#2a78d6"/>
+<text x="306.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">32</text>
+<path d="M332.0,376.0 V265.8 Q332.0,261.8 336.0,261.8 H364.0 Q368.0,261.8 368.0,265.8 V376.0 Z" fill="#2a78d6"/>
+<text x="350.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">52</text>
+<path d="M376.0,376.0 V279.4 Q376.0,275.4 380.0,275.4 H408.0 Q412.0,275.4 412.0,279.4 V376.0 Z" fill="#2a78d6"/>
+<text x="394.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">53</text>
+<path d="M420.0,376.0 V279.6 Q420.0,275.6 424.0,275.6 H452.0 Q456.0,275.6 456.0,279.6 V376.0 Z" fill="#2a78d6"/>
+<text x="438.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">54</text>
+<path d="M464.0,376.0 V280.0 Q464.0,276.0 468.0,276.0 H496.0 Q500.0,276.0 500.0,280.0 V376.0 Z" fill="#2a78d6"/>
+<text x="482.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">55</text>
+<path d="M508.0,376.0 V285.4 Q508.0,281.4 512.0,281.4 H540.0 Q544.0,281.4 544.0,285.4 V376.0 Z" fill="#2a78d6"/>
+<text x="526.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">56</text>
+<path d="M552.0,376.0 V281.5 Q552.0,277.5 556.0,277.5 H584.0 Q588.0,277.5 588.0,281.5 V376.0 Z" fill="#2a78d6"/>
+<text x="570.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">57</text>
+<path d="M596.0,376.0 V282.2 Q596.0,278.2 600.0,278.2 H628.0 Q632.0,278.2 632.0,282.2 V376.0 Z" fill="#2a78d6"/>
+<text x="614.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">58</text>
+<path d="M640.0,376.0 V273.3 Q640.0,269.3 644.0,269.3 H672.0 Q676.0,269.3 676.0,273.3 V376.0 Z" fill="#2a78d6"/>
+<text x="658.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">59</text>
+<path d="M684.0,376.0 V269.8 Q684.0,265.8 688.0,265.8 H716.0 Q720.0,265.8 720.0,269.8 V376.0 Z" fill="#2a78d6"/>
+<text x="702.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">62</text>
+<path d="M728.0,376.0 V284.6 Q728.0,280.6 732.0,280.6 H760.0 Q764.0,280.6 764.0,284.6 V376.0 Z" fill="#2a78d6"/>
+<text x="746.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">80</text>
+<path d="M772.0,376.0 V294.0 Q772.0,290.0 776.0,290.0 H804.0 Q808.0,290.0 808.0,294.0 V376.0 Z" fill="#eb6834"/>
+<text x="790.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">901</text>
+<path d="M816.0,376.0 V253.9 Q816.0,249.9 820.0,249.9 H848.0 Q852.0,249.9 852.0,253.9 V376.0 Z" fill="#eb6834"/>
+<text x="834.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">11948</text>
+<text x="834.0" y="267.9" font-size="12" font-weight="600" text-anchor="middle" fill="#0b0b0b">3.15×</text>
+<path d="M860.0,376.0 V260.2 Q860.0,256.2 864.0,256.2 H892.0 Q896.0,256.2 896.0,260.2 V376.0 Z" fill="#eb6834"/>
+<text x="878.0" y="394" font-size="12" text-anchor="middle" fill="#52514e">14107</text>
+<text x="878.0" y="274.2" font-size="12" font-weight="600" text-anchor="middle" fill="#0b0b0b">3.00×</text>
+<line x1="64" x2="900" y1="336.0" y2="336.0" stroke="#a3a29c" stroke-width="2"/>
+<line x1="64" x2="900" y1="249.1" y2="249.1" stroke="#0b0b0b" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="908" y="253.1" font-size="12" font-weight="600" fill="#0b0b0b">mean 3.17×</text>
+<text x="908" y="340.0" font-size="12" fill="#52514e">baseline</text>
+<line x1="64" x2="900" y1="376.0" y2="376.0" stroke="#a3a29c" stroke-width="1"/>
+<text x="482.0" y="424" font-size="13" text-anchor="middle" fill="#52514e">workload: sequence length T (tokens)</text>
+</svg>

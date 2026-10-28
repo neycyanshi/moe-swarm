@@ -1,0 +1,11 @@
+[solution]
+name = "moe-swarm-moe-v1"
+definition = "moe_fp8_block_scale_ds_routing_topk8_ng8_kg4_e32_h7168_i2048"
+author = "moe-swarm"
+
+[build]
+# v1 is pure PyTorch, so language = "python" (-> solution/python/). Flip to "triton"
+# when real @triton.jit kernels land; that also moves the source dir to solution/triton/.
+language = "python"
+entry_point = "kernel.py::kernel"
+destination_passing_style = false

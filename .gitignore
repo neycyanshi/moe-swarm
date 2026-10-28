@@ -1,0 +1,26 @@
+.gstack/
+.DS_Store
+solution.json
+# reference-only clone of the official starter kit, tracked in its own repo/remote
+flashinfer-bench-starter-kit/
+results/*
+# Nothing under results/ is tracked on main. It all belongs to origin/swarm-results, staged
+# there by scripts/results-sync.sh with `git add -f`, so no negation is needed here.
+# `solution/python/kernel.py` is the one curated copy of the leader on main.
+#
+# node.json in particular must not be tracked: every --calibrate rewrites it, so it is
+# permanently modified on every node, and a commit touching it on main would make
+# `git merge --ff-only` refuse there. A missing one is not a silent failure -- bench.py
+# exits telling you to run --calibrate, which beats inheriting another node's bandwidth.
+mlsys26-contest/
+__pycache__/
+*.pyc
+*.o
+*.so
+*.cubin
+*.ptx
+.venv/
+
+# per-agent worktrees, created and pruned by swarm.py each round
+.worktrees/
+.claude/
